@@ -1,6 +1,7 @@
 body {
     background-color: #f8f9fa;
     color: #333333;
+    margin: 0;
 }
 
 h1 {
@@ -28,6 +29,34 @@ p {
     font-weight: 300;
     font-size: 18px;
     text-align: justify;
+}
+
+.site-header {
+    background-color: #dfe6e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    margin-right: 10px;
+}
+
+.navigation a:last-child {
+    margin-right: 0;
+}
+
+.header-wrapper {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .wrapper {
