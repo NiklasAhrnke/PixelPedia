@@ -31,6 +31,13 @@ p {
     text-align: justify;
 }
 
+.hero {
+    background-image: url(/Web-Engineering-WS24/assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
 .site-header {
     background-color: #dfe6e9;
     display: flex;
