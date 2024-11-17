@@ -181,3 +181,10 @@ footer {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.important {
+    background-color: #CFE2FF;
+    padding: 16px;
+    border: solid 1px #00aaff;
+    border-radius: 5px;
+}
