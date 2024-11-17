@@ -68,7 +68,7 @@ p {
     text-align: left;
 }
 
-.button {
+button {
     background-color: #00aaff;
     border: none;
     color: white;
@@ -129,4 +129,11 @@ footer {
     font-size: 14px;
     color: black;
     height: 5vh;
+    margin-top: 5vh;
+}
+
+.chapter_navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
