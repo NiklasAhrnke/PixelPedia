@@ -146,6 +146,12 @@ footer {
     justify-content: end;
 }
 
+.chapter_navigation_last_page {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
 .title {
     display: flex;
     flex-direction: row;
