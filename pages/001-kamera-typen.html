@@ -59,6 +59,11 @@
             <h3>Eigene Meinung</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
+        <div class="quiz">
+            <div id="quiz"></div>
+            <button id="getResult">Ergebnisse</button>
+            <div id="results"></div>
+        </div>
         <br>
         <div class="chapter_navigation_first_page">
             <a href="/Web-Engineering-WS24/pages/002-kamera-objektive.html"><button>Nächstes Kapitel</button></a>
@@ -70,6 +75,95 @@
     </div>
     <div id="footer"></div>
 
+    <script>
+        const myQuestions = [
+            {
+                question: "Auf welchem Medium werden bei analogen Kameras die Fotos gespeichert?",
+                answers: {
+                    a: "SD-Karte",
+                    b: "Film",
+                    c: "Lochkarte"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "Was zeichnet eine Kompaktkamera besonders aus?",
+                answers: {
+                    a: "Die kleine Größe",
+                    b: "Die wechselbaren Objektive",
+                    c: "Der hohe Funktionsumfang"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "Welcher Kamera-Typ ist oft der schwerste?",
+                answers: {
+                    a: "Bridge-Kamera",
+                    b: "Spiegelreflexkamera",
+                    c: "Systemkamera"
+                },
+                correctAnswer: "b"
+            }
+        ]
+
+        function generateQuiz(questions, quizcontainer, resultscontainer, submitButton) {
+
+            function showQuiz(questions, quizcontainer) {
+                const heading = document.createElement("h3");
+                heading.innerHTML = "Quiz";
+                quizcontainer.appendChild(heading);
+                for(let i=0; i<questions.length; i++) {
+                    const questions_text = document.createElement("p");
+                    questions_text.innerHTML = questions[i].question;
+                    quizcontainer.appendChild(questions_text);
+                    for(let [key, value] of Object.entries(questions[i].answers)){
+                        const input = document.createElement("input");
+                        input.type = "radio";
+                        input.name = `q${i}`;
+                        input.id = `q${i}a${key}`;
+                        input.value = `${key}`;
+                        const label = document.createElement("label");
+                        label.id = `lq${i}a${key}`;
+                        label.innerText = `${value}`;
+                        quizcontainer.appendChild(input);
+                        quizcontainer.appendChild(label);
+                    }
+                }
+            }
+
+            function showResults(questions, quizcontainer, resultscontainer) {
+
+                let correctAnswers = 0;
+
+                const answers = document.querySelectorAll("input:checked");
+                for(let i=0; i<questions.length; i++) {
+                    if(answers[i].value === questions[i].correctAnswer) {
+                        document.getElementById("l" + answers[i].id).style.color = "green";
+                        correctAnswers++;
+                    } else {
+                        document.getElementById("l" + answers[i].id).style.color = "red";
+                    }
+                }
+
+                resultscontainer.innerText = `Du hast ${correctAnswers} von ${questions.length} Fragen richtig beantwortet!`
+            }
+
+            showQuiz(questions, quizcontainer);
+            submitButton.addEventListener("click", () => {
+                showResults(questions, quizcontainer, resultscontainer);
+            })
+        }
+
+        const questions = myQuestions;
+        const quizcontainer = document.getElementById("quiz");
+        const resultscontainer = document.getElementById("results");
+        const submitButton = document.getElementById("getResult");
+
+        document.addEventListener("DOMContentLoaded", function (){
+            generateQuiz(questions, quizcontainer, resultscontainer, submitButton);
+        });
+
+    </script>
     <script src="/modules/lightbox.js" defer></script>
 </body>
 </html>
