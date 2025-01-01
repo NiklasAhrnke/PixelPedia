@@ -1,0 +1,14 @@
+/* --- Footer Style --- */
+
+footer {
+    background-color: #dfe6e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+    height: 5vh;
+    margin-top: 5vh;
+}

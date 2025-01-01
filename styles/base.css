@@ -1,0 +1,126 @@
+/* --- Base Style --- */
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    margin: 0;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+}
+
+/* Heading Styles */
+
+h1 {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+}
+
+h4 {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Button Styles */
+
+button {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    width: fit-content;
+}
+
+/* Layout  */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chapter_navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chapter_navigation_first_page {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.chapter_navigation_last_page {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+/* Summary Section */
+
+.summary {
+    background-color: #CFE2FF;
+    padding: 16px;
+    border: solid 1px #00aaff;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.summary h3 {
+    margin-top: 0;
+}
+
+/* Important Section */
+
+.important {
+    background-color: rgba(210, 4, 45, 0.25);
+    padding: 16px;
+    border: solid 1px rgba(210, 4, 45, 1);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.important h3 {
+    margin-top: 0;
+}
+
+/* Opinion Section */
+
+.opinion {
+    background-color: rgba(255, 204, 128, 0.25);
+    padding: 16px;
+    border: solid 1px rgba(255, 204, 128, 1);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.opinion h3 {
+    margin-top: 0;
+}
+

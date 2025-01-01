@@ -1,0 +1,61 @@
+/* --- Header Style --- */
+
+/* Layout */
+
+header {
+    background-color: #dfe6e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-wrapper {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    margin-right: 10px;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+}
+
+.submenu-item {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.submenu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}

@@ -1,0 +1,38 @@
+/* --- Hero Style --- */
+
+#title {
+    color: white;
+    font-size: 78px;
+    font-weight: 900;
+    margin: 0;
+    line-height: 100%;
+}
+
+.hero {
+    background-image: url(/Web-Engineering-WS24/assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.hero_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 20vh;
+}
+
+.inner_hero_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2vh;
+}
+
+.inner_hero_wrapper p {
+    color: white;
+    margin: 0;
+    text-align: left;
+}
