@@ -93,6 +93,38 @@ header {
     align-items: center;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+.submenu-item {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.submenu-item:hover {
+    background-color: #f0f0f0;
+}
+
 .navigation a {
     text-decoration: none;
     font-family: "Roboto", serif;
@@ -100,10 +132,6 @@ header {
     font-size: 20px;
     color: black;
     margin-right: 10px;
-}
-
-.navigation a:last-child {
-    margin-right: 0;
 }
 
 .header-wrapper {
