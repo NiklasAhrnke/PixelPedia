@@ -8,6 +8,22 @@ body {
     font-weight: 300;
 }
 
+p {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+}
+
+a {
+    text-decoration: underline;
+    color: #00aaff;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 /* Heading Styles */
 
 h1 {
@@ -28,13 +44,6 @@ h3 {
 h4 {
     font-family: "Roboto", serif;
     font-weight: 500;
-}
-
-p {
-    font-family: "Roboto", serif;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: justify;
 }
 
 /* Button Styles */
