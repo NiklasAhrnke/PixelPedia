@@ -9,7 +9,7 @@
 }
 
 .hero {
-    background-image: url(/Web-Engineering-WS24/assets/images/background.jpg);
+    background-image: url("/Web-Engineering-WS24/assets/images/background.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -22,13 +22,14 @@
     flex-direction: column;
     width: 40%;
     margin-top: 20vh;
+    gap: 1em;
 }
 
 .inner_hero_wrapper {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 2vh;
+    width: 75%;
+    gap: 1em;
 }
 
 .inner_hero_wrapper p {
