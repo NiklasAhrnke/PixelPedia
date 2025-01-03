@@ -59,3 +59,17 @@ header {
 .menu-item:hover .sub-menu {
     display: block;
 }
+
+/* Progessbar */
+
+.progessbar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    height: 0.25em;
+    width: 100%;
+}
+
+.progress_item{
+    background-color: #00aaff;
+}
