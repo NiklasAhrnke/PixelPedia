@@ -37,3 +37,24 @@
     margin: 0;
     text-align: left;
 }
+
+@media (max-width: 800px) {
+    #title {
+        display: none;
+    }
+
+    #intro {
+        display: none;
+    }
+
+    .inner_hero_wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero_wrapper {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+}
