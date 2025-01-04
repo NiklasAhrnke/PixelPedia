@@ -76,9 +76,10 @@
     </div>
     <div id="footer"></div>
 
-    <script src="../modules/lightbox.js" defer></script>
-    <script src="../modules/quiz.js" defer></script>
-    <script>
+    <script type="module">
+        import { generateQuiz } from '../modules/quiz.js';
+        import { lightbox } from "../modules/lightbox.js";
+
         const myQuestions = [
             {
                 question: "Auf welchem Medium werden bei analogen Kameras die Fotos gespeichert?",
@@ -117,6 +118,8 @@
         document.addEventListener("DOMContentLoaded", function (){
             generateQuiz(questions, quizcontainer, resultscontainer, submitButton);
         });
+
+        lightbox();
 
     </script>
 

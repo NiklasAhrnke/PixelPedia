@@ -1,4 +1,4 @@
-function generateQuiz(questions, quizcontainer, resultscontainer, submitButton) {
+export function generateQuiz(questions, quizcontainer, resultscontainer, submitButton) {
 
     function showQuiz(questions, quizcontainer) {
         const heading = document.createElement("h3");
