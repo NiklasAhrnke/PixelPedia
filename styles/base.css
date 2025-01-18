@@ -91,6 +91,26 @@ button {
     justify-content: start;
 }
 
+/* Images */
+
+.article_image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery_image {
+    width: 33%;
+}
+
 /* Summary Section */
 
 .summary {
@@ -113,6 +133,7 @@ button {
     border: solid 1px rgba(210, 4, 45, 1);
     border-radius: 5px;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .important h3 {

@@ -21,6 +21,7 @@ export function generateQuiz(questions, quizcontainer, resultscontainer, submitB
                 quizcontainer.appendChild(label);
             }
         }
+        
     }
 
     function showResults(questions, quizcontainer, resultscontainer) {

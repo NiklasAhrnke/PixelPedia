@@ -3,7 +3,7 @@ export function lightbox() {
         const lightbox = document.getElementById("lightbox");
         const lightboxImage = document.getElementById("lightbox-image");
         const lightboxTitle = document.getElementById("lightbox-title")
-        const allImages = document.querySelectorAll(".article_image")
+        const allImages = document.querySelectorAll(".lightbox-enabled")
 
         allImages.forEach(image => {
             image.addEventListener("click", () => {
