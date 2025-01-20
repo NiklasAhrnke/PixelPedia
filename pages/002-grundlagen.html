@@ -68,13 +68,26 @@
         <p>Die Reziprokenregel besagt, dass die maximale Belichtungszeit, mit der ein Foto wackelfrei aus der Hand geschossen werden kann, immer dem Kehrwert der effektiven Brennweite entspricht. Wenn du also mit einer Brennweite von 50mm fotografierst, dann sollte die Belichtungszeit höchstens 1/50 Sekunde betragen, um aus der Hand ein scharfes Foto schießen zu können. </p>
     </div>
     <h2>ISO</h2>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <h2>Brennweite</h2>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
+    <p>Nach der Blende und der Belichtungszeit ist der ISO-Wert die dritte grundlegende Einstellung, mit der man die Belichtung des Bildes beeinflussen kann. Er gibt an, wie empfindlich der Bildsensor der Kamera auf Licht reagiert. Diese wird in konkreten Zahlen-Werten angegeben, wobei niedrige Werte für eine geringe Lichtempfindlichkeit stehen und umgekehrt hohe Werte für eine hohe Lichtempfindlichkeit</p>
+    <p>In der Regel verwendet man ISO 100-400 bei optimalem Licht, also z.B. draußen an einem sonnigen Tag mit viel Tageslicht oder bei einer hell beleuchteten Szene. ISO-Werte zwischen 400 und 1600 verwendet man oft an bewölkten Tagen oder bei Innenaufnahmen mit nur mäßigem Licht und höhere Werte kommen nur bei schlechten Lichtverhältnissen zum Einsatz. Beispielsweise in der Abenddämmerung, bei Nacht oder in sehr schlecht beleuchteten Räumen. </p>
+    <p>Wie so oft müssen wir aber auch hier abwägen und man sollte nicht einfach bedenkenlos den ISO-Wert hochdrehen. Denn mit steigender Empfindlichkeit verschlechtert sich die Bildqualität teilweise immens. Details gehen verloren, die Farbwiedergabe wird schlechter und es kommt zum sogenannten Bildrauschen:</p>
+    <div class="gallery">
+        <img class="gallery_image lightbox-enabled" src="../assets/images/Placeholder.jpg" alt="50mm ・ f/4 ・ 1/50 Sek. ・ ISO 100">
+        <img class="gallery_image lightbox-enabled" src="../assets/images/Placeholder.jpg" alt="50mm ・ f/4 ・ 1/400 Sek. ・ ISO 100">
+        <img class="gallery_image lightbox-enabled" src="../assets/images/Placeholder.jpg" alt="50mm ・ f/4 ・ 1/1000 Sek. ・ ISO 100">
+    </div>
+    <div class="summary">
+        <h3>Zusammenfassung</h3>
+        <p>Die Belichtung eines Fotos wird durch drei Hauptfaktoren beeinflusst: Blende, Belichtungszeit und ISO-Wert. Die Blende regelt die Lichtmenge und beeinflusst die Schärfentiefe des Bildes – eine offene Blende (kleiner f-Wert) lässt mehr Licht durch und verringert die Schärfentiefe. Die Belichtungszeit bestimmt, wie lange Licht auf den Sensor fällt, was die Helligkeit und die Darstellung von Bewegungen beeinflusst. Kürzere Belichtungszeiten "frieren" Bewegungen ein, während längere Belichtungszeiten Bewegungsunschärfe erzeugen können. Der ISO-Wert steuert die Lichtempfindlichkeit des Sensors: höhere Werte sind bei schwachem Licht notwendig, können jedoch Bildrauschen verursachen. Ein ausgewogenes Zusammenspiel dieser Einstellungen führt zu optimalen Ergebnissen.</p>
+    </div>
+    <div class="quiz">
+        <div id="quiz"></div>
+        <button id="getResult">Ergebnisse</button>
+        <div id="results"></div>
+    </div>
     <div class="chapter_navigation">
         <a href="/Web-Engineering-WS24/pages/001-kamera-typen.html"><button>Letztes Kapitel</button></a>
-        <a href="/Web-Engineering-WS24/pages/003-grundlagen.html"><button>Nächstes Kapitel</button></a>
+        <a href="/Web-Engineering-WS24/pages/003-kamera-objektive.html"><button>Nächstes Kapitel</button></a>
     </div>
 </div>
 <div id="lightbox">
@@ -86,6 +99,46 @@
 <script type="module">
     import { generateQuiz } from '../modules/quiz.js';
     import { lightbox } from "../modules/lightbox.js";
+
+    const myQuestions = [
+        {
+            question: "Du möchtest ein Porträt von einer Person an einem sonnigen Tag mit unscharfen Hintergrund aufnehmen. Wie solltest du die Blende einstellen?",
+            answers: {
+                a: "f/5.6",
+                b: "f/16",
+                c: "f/2.8"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "Es soll eine fliegende Möwe bei klarem Himmel abgelichtet werden. Auf welchen dieser Werte stellst du die Belichtungszeit am ehesten?",
+            answers: {
+                a: "5 Sek.",
+                b: "1/100sek",
+                c: "1/1000sek"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "Es ist dunkel und trotz offener Blende und langer Belichtungszeit sind deine Bilder zu dunkel. Wie passt du den ISO-Wert an?",
+            answers: {
+                a: "ISO-Wert verringern",
+                b: "ISO-Wert erhöhen",
+                c: "Der ISO-Wert ist irrelevant für die Belichtung"
+            },
+            correctAnswer: "b"
+        }
+    ]
+
+    const questions = myQuestions;
+    const quizcontainer = document.getElementById("quiz");
+    const resultscontainer = document.getElementById("results");
+    const submitButton = document.getElementById("getResult");
+
+    document.addEventListener("DOMContentLoaded", function (){
+        generateQuiz(questions, quizcontainer, resultscontainer, submitButton);
+    });
+
     lightbox();
 </script>
 </body>
