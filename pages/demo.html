@@ -27,7 +27,7 @@
 
 <script>
   (async () => {
-    const result = await fetch("./data.json");
+    const result = await fetch("../assets/data.json");
     const data = await result.json();
     let currentData = data;
     const content = document.getElementById('content');
