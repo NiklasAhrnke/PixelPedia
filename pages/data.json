@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Canon EF 50mm f/1.8 STM",
+    "minFocalLength": "50",
+    "maxFocalLength": "50",
+    "aperture": "1.8",
+    "weight": "160",
+    "mount": "Canon EF",
+    "price": "125",
+    "focusType": "Autofocus",
+    "imageStabilization": "No",
+    "description": "A lightweight prime lens with a wide aperture, perfect for portraits and low light."
+  },
+  {
+    "name": "Nikon AF-S 24-70mm f/2.8E ED VR",
+    "minFocalLength": "24",
+    "maxFocalLength": "70",
+    "aperture": "2.8",
+    "weight": "1000",
+    "mount": "Nikon F",
+    "price": "2300",
+    "focusType": "Autofocus",
+    "imageStabilization": "Yes",
+    "description": "A versatile zoom lens with excellent image quality, ideal for professionals."
+  },
+  {
+    "name": "Sony FE 24-70mm f/2.8 GM",
+    "minFocalLength": "24",
+    "maxFocalLength": "70",
+    "aperture": "2.8",
+    "weight": "886",
+    "mount": "Sony E",
+    "price": "2200",
+    "focusType": "Autofocus",
+    "imageStabilization": "Yes",
+    "description": "A premium lens with fast autofocus and outstanding sharpness, perfect for portrait and landscape photography."
+  },
+  {
+    "name": "Sigma 18-50mm f/2.8 DC DN",
+    "minFocalLength": "18",
+    "maxFocalLength": "50",
+    "aperture": "2.8",
+    "weight": "290",
+    "mount": "Sony E, L-mount, Micro Four Thirds",
+    "price": "550",
+    "focusType": "Autofocus",
+    "imageStabilization": "No",
+    "description": "Compact and lightweight, this lens is ideal for everyday photography and vlogging."
+  },
+  {
+    "name": "Tamron 70-200mm f/2.8 Di VC USD G2",
+    "minFocalLength": "70",
+    "maxFocalLength": "200",
+    "aperture": "2.8",
+    "weight": "1480",
+    "mount": "Canon EF, Nikon F",
+    "price": "1300",
+    "focusType": "Autofocus",
+    "imageStabilization": "Yes",
+    "description": "A professional-grade telephoto zoom lens with vibration control, great for sports and wildlife photography."
+  },
+  {
+    "name": "Fujifilm XF 56mm f/1.2 R",
+    "minFocalLength": "56",
+    "maxFocalLength": "56",
+    "aperture": "1.2",
+    "weight": "405",
+    "mount": "Fujifilm X",
+    "price": "1000",
+    "focusType": "Autofocus",
+    "imageStabilization": "No",
+    "description": "A fast prime lens with a large aperture, perfect for portraits with beautiful bokeh."
+  },
+  {
+    "name": "Olympus M.Zuiko Digital ED 12-40mm f/2.8 Pro",
+    "minFocalLength": "12",
+    "maxFocalLength": "40",
+    "aperture": "2.8",
+    "weight": "382",
+    "mount": "Micro Four Thirds",
+    "price": "900",
+    "focusType": "Autofocus",
+    "imageStabilization": "No",
+    "description": "A weather-sealed, professional zoom lens with excellent image quality for travel and street photography."
+  }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <script>
+    fetch('/modules/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+  </script>
+</head>
+<body>
+<div id="header"></div>
+  <div class="wrapper">
+    <p>Preis zwischen <input id="minPrice" type="text" value="0"> und <input id="maxPrice" type="text" value="9999"> <button id="filterButton">Filtern</button></p>
+      <div id="content">
+      </div>
+    <button id="totalPriceButton">Gesamtpreis berechnen</button>
+    <div id="totalPrice"></div>
+  </div>
+
+<script>
+  (async () => {
+    const result = await fetch("./data.json");
+    const data = await result.json();
+    let currentData = data;
+    const content = document.getElementById('content');
+
+    content.innerHTML = data.map(lens =>
+            `<div class="summary"><h3>${lens.name}</h3><p>Brennweite: ${lens.minFocalLength}-${lens.maxFocalLength}mm<br>Lichtstärke: f/${lens.aperture}<br>Gewicht: ${lens.weight}g<br>Preis: $${lens.price}</p><p>${lens.description}</p></div>`
+    ).join('');
+
+    document.getElementById("filterButton").addEventListener("click", () => {
+      currentData = data.filter(lens => parseInt(lens.price) < document.getElementById("maxPrice").value && parseInt(lens.price) > document.getElementById("minPrice").value);
+      content.innerHTML = currentData.map(lens =>
+              `<div class="summary"><h3>${lens.name}</h3><p>Brennweite: ${lens.minFocalLength}-${lens.maxFocalLength}mm<br>Lichtstärke: f/${lens.aperture}<br>Gewicht: ${lens.weight}g<br>Preis: $${lens.price}</p><p>${lens.description}</p></div>`
+      ).join('');
+    })
+
+    document.getElementById("totalPriceButton").addEventListener("click", () => {
+      const totalPrice = currentData.reduce((acc, lens) => parseInt(acc) + parseInt(lens.price), 0)
+      document.getElementById("totalPrice").innerHTML = `<p>$${totalPrice}</p>`;
+    })
+
+  })();
+</script>
+</body>
+</html>
