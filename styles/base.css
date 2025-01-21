@@ -91,6 +91,15 @@ button {
     justify-content: start;
 }
 
+.about {
+    display: flex;
+    max-width: 700px;
+    height: 90vh;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 /* Images */
 
 .article_image {

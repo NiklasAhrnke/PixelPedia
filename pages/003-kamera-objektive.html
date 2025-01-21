@@ -24,7 +24,7 @@
 </head>
 <body>
 <div id="header"></div>
-<div class="progessbar"><div class="progress_item"></div><div class="progress_item"></div><div class="progress_item"></div></div>
+<div id="progessbar" class="progessbar"></div>
 <div class="wrapper">
     <h1>Kapitel 03 - Kamera Objektive</h1>
     <h2>Brennweite</h2>
@@ -48,5 +48,9 @@
 <div id="footer"></div>
 
 <script src="../modules/lightbox.js" defer></script>
+<script>
+    const progressbarHTML = "<div class=\"progress_item\"></div>";
+    document.getElementById("progessbar").innerHTML = progressbarHTML.repeat(3);
+</script>
 </body>
 </html>

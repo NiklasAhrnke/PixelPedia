@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="header"></div>
-    <div class="progessbar"><div class="progress_item"></div></div>
+    <div id="progessbar" class="progessbar"></div>
     <div class="wrapper">
         <h1>Kapitel 01 - Kamera-Typen</h1>
         <h2>Was macht eine Kamera aus?</h2>
@@ -73,8 +73,12 @@
     <div id="footer"></div>
 
     <script type="module">
+
         import { generateQuiz } from '../modules/quiz.js';
         import { lightbox } from "../modules/lightbox.js";
+
+        const progressbarHTML = "<div class=\"progress_item\"></div>";
+        document.getElementById("progessbar").innerHTML = progressbarHTML.repeat(1);
 
         const myQuestions = [
             {
