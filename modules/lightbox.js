@@ -5,8 +5,9 @@ export function lightbox() {
         const lightboxTitle = document.getElementById("lightbox-title")
         const allImages = document.querySelectorAll(".lightbox-enabled")
 
+        //open Image
         allImages.forEach(image => {
-            image.addEventListener("click", () => {
+            image.addEventListener("click", () => { //Click Event Listener for every image
                 lightbox.style.display = "flex";
                 lightboxImage.src = image.src;
                 document.body.style.overflow = "hidden";
@@ -14,6 +15,7 @@ export function lightbox() {
             })
         })
 
+        //close Image
         lightbox.addEventListener("click", () => {
             lightbox.style.display = "none";
             document.body.style.overflow = "auto";
