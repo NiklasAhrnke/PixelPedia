@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="../styles/tooltip.css">
     <script src="https://kit.fontawesome.com/cf06983706.js" crossorigin="anonymous"></script>
     <script>
-        fetch('/modules/header.html')
+        fetch('../modules/header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header').innerHTML = data);
 
-        fetch('/modules/footer.html')
+        fetch('../modules/footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
