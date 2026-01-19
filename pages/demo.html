@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <script>
-    fetch('/modules/header.html')
+    fetch('../modules/header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header').innerHTML = data);
   </script>
